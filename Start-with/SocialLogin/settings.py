@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     #local 
     'user',
+    'core',
 
     'allauth',
     'allauth.account',
@@ -135,6 +136,11 @@ STATIC_URL = '/static/'
 SITE_ID = 2
 
 LOGIN_REDIRECT_URL = '/' 
+
+ACCOUNT_EMAIL_REQUIRED = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 SCOIALALCOUNT_PROVIDERS = {
     'google':{
