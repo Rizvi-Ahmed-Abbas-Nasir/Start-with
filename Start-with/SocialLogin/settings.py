@@ -135,3 +135,15 @@ STATIC_URL = '/static/'
 SITE_ID = 2
 
 LOGIN_REDIRECT_URL = '/' 
+
+SCOIALALCOUNT_PROVIDERS = {
+    'google':{
+        'SCOPE':[
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS':{
+            'access_type': 'online',
+        }
+    }
+}
